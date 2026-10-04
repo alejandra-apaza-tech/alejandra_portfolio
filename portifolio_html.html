@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicole Alejandra | Portfólio</title>
+<meta name="description" content="Estudante de Engenharia de Software na UNICID com foco em Segurança da Informação e Dados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B1020;--panel:#121A2E;--line:#24304D;--teal:#2DD4BF;--violet:#A56EFF;--text:#E6EAF5;--mute:#93A0BF;
+--grad:linear-gradient(90deg,var(--teal),#6FA8F5 50%,var(--violet));box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--ink);color:var(--text);font:400 1rem/1.7 Sora,system-ui,sans-serif;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 50% 0,rgba(11,16,32,.55),var(--ink) 75%);z-index:-1}
+a{color:var(--teal)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:rgba(11,16,32,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:24px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--mute);text-decoration:none;font-size:.9rem}
+nav a:hover{color:var(--text)}
+nav .brand{margin-right:auto;color:var(--text);font-weight:800}
+.hero{padding:72px 0 56px}
+.frame{position:relative;padding:64px 24px;text-align:center;background:rgba(18,26,46,.7);border:1px solid var(--line);border-radius:6px}
+.frame i{position:absolute;width:28px;height:28px;border:2px solid var(--teal)}
+.frame i:nth-child(1){top:12px;left:12px;border-right:0;border-bottom:0}
+.frame i:nth-child(2){top:12px;right:12px;border-left:0;border-bottom:0}
+.frame i:nth-child(3){bottom:12px;left:12px;border-right:0;border-top:0}
+.frame i:nth-child(4){bottom:12px;right:12px;border-left:0;border-top:0}
+h1{margin:0;font-weight:800;font-size:clamp(2.2rem,8vw,4.6rem);line-height:1.05;letter-spacing:.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin:20px auto 0;max-width:620px;color:var(--mute)}
+.status{display:inline-flex;gap:8px;align-items:center;margin-top:24px;padding:6px 14px;border:1px solid var(--teal);border-radius:6px;font:600 .8rem 'JetBrains Mono',monospace;color:var(--teal)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--text)}
+.btn.main{background:var(--grad);color:var(--ink);border:0}
+.btn:hover{border-color:var(--teal)}
+section{padding:56px 0}
+h2{margin:0 0 28px;font-size:1.6rem;font-weight:800}
+h2::after{content:"";display:block;width:56px;height:3px;margin-top:10px;background:var(--grad)}
+.about{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
+.photo{aspect-ratio:1;border:1px dashed var(--mute);border-radius:50%;display:grid;place-items:center;color:var(--mute);font-size:.8rem;text-align:center;padding:12px}
+.about p{margin:0 0 14px;max-width:68ch}
+.quote{border-left:3px solid var(--violet);padding-left:16px;color:var(--mute);font-style:italic}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:22px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card small{color:var(--mute)}
+.card ul{margin:12px 0 0;padding-left:18px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{padding:3px 11px;border-radius:99px;border:1px solid var(--line);font-size:.85rem;color:var(--text)}
+.tag.hot{border-color:var(--teal)}
+.timeline{border-left:2px solid var(--line);padding-left:24px;display:grid;gap:24px}
+.timeline article{position:relative}
+.timeline article::before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--violet)}
+.timeline h3{margin:0}
+.timeline p{margin:6px 0 0;color:var(--mute);max-width:68ch}
+.proj{display:flex;flex-direction:column;padding:0;overflow:hidden}
+.proj .img{aspect-ratio:16/9;display:grid;place-items:center;border-bottom:1px dashed var(--line);color:var(--mute);font-size:.85rem;background:rgba(11,16,32,.5)}
+.proj .body{padding:18px 22px 22px}
+.proj.empty{border-style:dashed}
+.proj h3{margin:0 0 6px}
+.proj p{margin:0;color:var(--mute);font-size:.95rem}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mute);text-align:center;font-size:.9rem}
+@media(max-width:700px){.about{grid-template-columns:1fr}.photo{width:150px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="#inicio">Nicole Alejandra</a>
+<a href="#sobre">Sobre</a><a href="#trajetoria">Trajetória</a><a href="#habilidades">Habilidades</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+<div class="frame"><i></i><i></i><i></i><i></i>
+<h1>NICOLE ALEJANDRA</h1>
+<p class="sub">Estudante de Engenharia de Software na UNICID, com foco em Segurança da Informação e Dados.</p>
+<span class="status">STATUS: IN TRAINING</span>
+<div class="cta">
+<a class="btn main" href="#projetos">Ver projetos</a>
+<a class="btn" href="https://github.com/alejandra-apaza-tech" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="#contato">Entrar em contato</a>
+</div></div>
+</div></header>
+
+<main>
+<section id="sobre"><div class="wrap">
+<h2>Sobre mim</h2>
+<div class="about">
+<div class="photo">Adicione sua foto aqui</div>
+<div>
+<p>Minha trajetória em tecnologia começou no atendimento ao cliente e nas vendas. Foi ali, resolvendo problemas com agilidade e mantendo a organização sob pressão, que descobri o que mais me move: o cuidado com a informação.</p>
+<p>Hoje cursando Engenharia de Software na UNICID, foco em Segurança da Informação e em Gestão de Dados e Analytics, porque empresas de todos os tamanhos precisam de gente que saiba organizar, proteger e dar sentido aos dados que gerenciam.</p>
+<p>Sou bilíngue em português e espanhol e levo do meu histórico em vendas uma visão prática de como a tecnologia resolve problemas reais de negócio.</p>
+<p class="quote">Proteger dados hoje é construir confiança para o futuro.</p>
+</div></div>
+</div></section>
+
+<section id="trajetoria"><div class="wrap">
+<h2>Trajetória</h2>
+<div class="timeline">
+<article>
+<h3>Engenharia de Software</h3>
+<small>UNICID, Universidade Cidade de São Paulo, Tatuapé. Em andamento</small>
+<p>Disciplinas em andamento: Modelagem de Dados, Algoritmos e Pensamento Computacional e Desenvolvimento Frontend Web. Já concluí Python I e II.</p>
+</article>
+<article>
+<h3>Atendente e balconista</h3>
+<small>Atendimento e vendas</small>
+<p>Cheguei sem experiência e evoluí até atender de 10 a 15 clientes por dia. Fui recomendada pela chefe para outra loja, onde passei a atender também pelo WhatsApp e aprendi noções de informática e marketing.</p>
+</article>
+</div>
+</div></section>
+
+<section id="habilidades"><div class="wrap">
+<h2>Habilidades</h2>
+<div class="grid">
+<div class="card"><h3>Técnicas</h3>
+<div class="tags">
+<span class="tag hot">Modelagem de Dados</span><span class="tag hot">Segurança da Informação</span><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Figma / UX</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+</div></div>
+<div class="card"><h3>Comportamentais</h3>
+<div class="tags"><span class="tag">Pensamento analítico</span><span class="tag">Resolução de problemas</span><span class="tag">Comunicação assertiva</span><span class="tag">Adaptabilidade</span><span class="tag">Aprendizado contínuo</span></div></div>
+<div class="card"><h3>Idiomas</h3>
+<ul><li>Espanhol: nativo</li><li>Português: fluente</li><li>Inglês: intermediário</li></ul></div>
+<div class="card"><h3>Cursos extras</h3>
+<ul><li>Business Intelligence (BI)</li><li>Soluções Tecnológicas Emergentes</li><li>Marketing Digital</li><li>Design Gráfico</li><li>Python I e II</li></ul></div>
+</div>
+</div></section>
+
+<section id="projetos"><div class="wrap">
+<h2>Projetos</h2>
+<p style="color:var(--mute);margin-top:-12px">Esta área mostra automaticamente os repositórios públicos do meu GitHub.</p>
+<div class="grid" id="repos">
+<!-- Cartões vazios: ficam aqui até você publicar projetos no GitHub. -->
+<div class="card proj empty"><div class="img">Imagem do projeto</div><div class="body"><h3>Projeto em breve</h3><p>Em construção.</p></div></div>
+<div class="card proj empty"><div class="img">Imagem do projeto</div><div class="body"><h3>Projeto em breve</h3><p>Em construção.</p></div></div>
+<div class="card proj empty"><div class="img">Imagem do projeto</div><div class="body"><h3>Projeto em breve</h3><p>Em construção.</p></div></div>
+</div>
+<p><a href="https://github.com/alejandra-apaza-tech?tab=repositories" target="_blank" rel="noopener">Ver todos os repositórios no GitHub</a></p>
+</div></section>
+
+<section id="contato"><div class="wrap">
+<h2>Contato</h2>
+<div class="card">
+<p style="margin-top:0">Aberta a oportunidades e colaborações. Escreva para mim ou me encontre nas redes:</p>
+<div class="links">
+<a class="btn main" href="mailto:alejandraapaza2030@gmail.com">Enviar e-mail</a>
+<a class="btn" href="https://github.com/alejandra-apaza-tech" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/SEU-LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://www.instagram.com/alejandrabel.lexie/" target="_blank" rel="noopener">Instagram</a>
+<a class="btn" href="https://x.com/alejandradevbel" target="_blank" rel="noopener">X</a>
+<a class="btn" href="https://dev.to/SEU-USUARIO-DEV" target="_blank" rel="noopener">DEV.to</a>
+</div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">São Paulo, SP. Feito por Nicole Alejandra.</div></footer>
+
+<script>
+(async function () {
+  var box = document.getElementById('repos');
+  try {
+    var res = await fetch('https://api.github.com/users/alejandra-apaza-tech/repos?sort=updated&per_page=30');
+    if (!res.ok) return;
+    var repos = (await res.json()).filter(function (r) {
+      return !r.fork && r.name !== 'alejandra-apaza-tech';
+    }).slice(0, 6);
+    if (!repos.length) return;
+    box.innerHTML = '';
+    repos.forEach(function (r) {
+      var c = document.createElement('div');
+      c.className = 'card proj';
+      var img = document.createElement('div'); img.className = 'img'; img.textContent = 'Imagem do projeto';
+      var b = document.createElement('div'); b.className = 'body';
+      var h = document.createElement('h3'); var a = document.createElement('a');
+      a.href = r.html_url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = r.name; h.appendChild(a);
+      var p = document.createElement('p'); p.textContent = r.description || 'Sem descrição ainda.';
+      b.appendChild(h); b.appendChild(p);
+      if (r.language) { var t = document.createElement('div'); t.className = 'tags'; var s = document.createElement('span'); s.className = 'tag'; s.textContent = r.language; t.appendChild(s); b.appendChild(t); }
+      c.appendChild(img); c.appendChild(b); box.appendChild(c);
+    });
+  } catch (e) { /* mantém os cartões vazios */ }
+})();
+</script>
+</body>
+</html>
